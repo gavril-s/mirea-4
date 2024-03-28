@@ -12,16 +12,6 @@ public class SemaphoreMap<K, V> {
         map = new HashMap<K, V>();
     }
 
-    static void increment() {
-        try {
-            semaphore.acquire();
-
-            semaphore.release();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-    }
-
     public Boolean containsKey(K k) {
         Boolean res = null;
         try {

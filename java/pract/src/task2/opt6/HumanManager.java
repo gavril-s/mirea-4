@@ -18,7 +18,7 @@ public class HumanManager {
         humans = humans.stream()
                 .filter(human -> human.birthDate.isBefore(LocalDate.of(1993, 2, 3)))
                 .collect(Collectors.toList());
-        lastNames  = humans.stream().map(human -> human.lastName).reduce((lhs, rhs) -> lhs + rhs).orElse("");
+        lastNames = humans.stream().map(human -> human.lastName).reduce((lhs, rhs) -> lhs + rhs).orElse("");
     }
 
     public List<Human> getHumans() {

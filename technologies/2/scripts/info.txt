@@ -1,0 +1,9 @@
+Date and Time
+Fri Mar 15 04:33:12 MSK 2024
+
+Logged Users
+senkevich-g      console      Mar 10 19:55 
+senkevich-g      ttys007      Mar 15 01:35 
+
+System Uptime
+4:33 up 4 days, 8:39, 2 users, load averages: 2.44 2.07 2.87
