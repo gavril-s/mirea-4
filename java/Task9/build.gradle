@@ -1,0 +1,45 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+task createJar(type: Jar) {
+    from sourceSets.main.output
+    archiveFileName = "app.jar"
+    manifest {
+        attributes(
+                'Main-Class': 'org.example.Main'
+        )
+    }
+}
+
+task copyJar(type: Copy) {
+    from createJar
+    into "docker"
+}
+
+task buildDocker(type: Exec) {
+    dependsOn createJar
+    dependsOn copyJar
+    commandLine "docker", "build", "-t", "app", "docker"
+}
+
+task runDocker(type: Exec) {
+    dependsOn buildDocker
+    commandLine "docker", "run", "-i", "--rm", "app"
+}
