@@ -1,0 +1,8 @@
+FROM drupal:latest
+
+VOLUME /var/www/html/modules
+VOLUME /var/www/html/profiles
+VOLUME /var/www/html/themes
+VOLUME /var/www/html/sites
+
+EXPOSE 80

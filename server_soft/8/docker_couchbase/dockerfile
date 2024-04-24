@@ -1,0 +1,5 @@
+FROM couchbase:latest
+
+VOLUME /opt/couchbase/var
+
+EXPOSE 8091 8092 8093 11210

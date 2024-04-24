@@ -1,0 +1,8 @@
+FROM jenkins/jenkins:lts
+
+USER root
+ENV JENKINS_HOME /var/jenkins_home
+
+EXPOSE 8080 50000
+
+CMD ["/sbin/tini", "--", "/usr/local/bin/jenkins.sh"]
