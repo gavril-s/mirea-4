@@ -1,0 +1,11 @@
+services:
+  first:
+    build: ./first
+    ports:
+      - 5000:80
+    depends_on:
+      - second
+  second:
+    build: ./second
+    ports:
+      - 5001:80
