@@ -1,0 +1,7 @@
+FROM postgres:latest
+
+ENV POSTGRES_DB=market_db
+ENV POSTGRES_USER=admin
+ENV POSTGRES_PASSWORD=admin
+
+EXPOSE 5433

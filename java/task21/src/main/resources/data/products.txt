@@ -1,0 +1,5 @@
+1,Apple,1.99
+2,Banana,0.99
+3,Orange,2.49
+4,Milk,1.49
+5,Apple,2.1

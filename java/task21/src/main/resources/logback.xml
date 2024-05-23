@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <!-- Appender to log to console -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} - %5p [%t] %-40.40logger{39} : %m%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Log everything at INFO level to the console -->
+    <root level="info">
+        <appender-ref ref="STDOUT"/>
+    </root>
+
+    <!-- Log "com.example.Task17.service" at DEBUG level -->
+    <logger name="com.example.Task19.service" level="debug" additivity="false">
+        <appender-ref ref="STDOUT"/>
+    </logger>
+
+</configuration>
