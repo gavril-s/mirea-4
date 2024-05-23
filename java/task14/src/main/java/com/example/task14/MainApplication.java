@@ -1,13 +1,12 @@
-package com.example.task14;
+package com.example.Task14;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Task14Application {
+public class MainApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Task14Application.class, args);
+		SpringApplication.run(MainApplication.class, args);
 	}
-
 }

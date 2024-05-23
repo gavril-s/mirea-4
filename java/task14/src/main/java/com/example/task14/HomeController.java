@@ -1,4 +1,4 @@
-package com.example.task14;
+package com.example.Task14;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
